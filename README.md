@@ -29,6 +29,7 @@ Per compilare il firmware puoi eseguire i seguenti comandi:
    ```
    cp env_example .env
    ```
+
 2. Configurazione parametri di rete (Modificare l'indirizzo IP per puntare al Raspberry Pi / Server locale):
    ```
    WIFI_SSID=cambia_questo
@@ -40,4 +41,17 @@ Per compilare il firmware puoi eseguire i seguenti comandi:
 
    ```
 
-3. make 
+3. Prima compilazione (per il primo upload via USB):
+   ```
+   pio run -t upload   
+   ```
+
+### Per tutte le successive compilazioni (PULL-OTA)
+
+1. **Aggiornamento Versione**: 
+   Incrementa `const int FW_VERSION` nel file `src/main.cpp` (es: da 270 a 271).
+
+2. **Deploy via Server**:
+   Lancia il comando:
+   ```bash
+   make
