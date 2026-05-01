@@ -20,7 +20,7 @@ Per garantire la conformità agli standard di audit e la non ripudiabilità:
 - Storage      : FRAM (Real-time) + SQLite (Storage)
 - Protocolli   : MQTT, mTLS, HTTP Ingest
 
----
+
 
 ## Aggiornamento Over The Air (Pull-OTA
 Il Pull-OTA funziona così: l'ESP32 è il cliente e il server Flask è il magazzino.
@@ -31,7 +31,7 @@ Il Pull-OTA funziona così: l'ESP32 è il cliente e il server Flask è il magazz
 
 Vantaggio: Non devi collegare cavi USB. Ti basta caricare il file sul server e l'hardware si aggiorna via Wi-Fi quando è pronto.
 
----
+
 
 ### Guida alla Configurazione Rapida
 Per compilare il firmware puoi eseguire i seguenti comandi:
