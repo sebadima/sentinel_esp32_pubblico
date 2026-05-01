@@ -18,7 +18,6 @@ Per garantire la conformità agli standard di audit e la non ripudiabilità:
 - MCU          : ESP32 (Firmware C++ / Toolchain RAW)
 - OS Centrale  : Ubuntu LTS (Gestione tramite Vim/Bash/Python)
 - Storage      : FRAM (Real-time) + SQLite (Storage)
-- Crittografia : SHA-256 Hardware-backed
 - Protocolli   : MQTT, mTLS, HTTP Ingest
 
 ---
