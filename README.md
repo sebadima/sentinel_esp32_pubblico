@@ -15,23 +15,21 @@ Per garantire la conformità agli standard di audit e la non ripudiabilità:
 * Isolamento di Rete: Il perimetro di rete è chiuso, non ci sono porte o servizi MQTT aperti verso server in cloud.
 
 ### Specifiche Tecniche
-- MCU          : ESP32 (Firmware C++ / Toolchain RAW)
-- OS Centrale  : Ubuntu LTS (Gestione tramite Vim/Bash/Python)
+- MCU          : ESP32 (Firmware C++ / Toolchain Platformio)
+- OS Centrale  : Ubuntu 22.04 LTS su Raspberry PI
 - Storage      : FRAM (Real-time) + SQLite (Storage)
-- Protocolli   : MQTT, mTLS, HTTP Ingest
+- Protocolli   : mTLS, HTTP Ingest
 
 
 
-## Aggiornamento Over The Air (Pull-OTA
-Il Pull-OTA funziona così: l'ESP32 è il cliente e il server Flask è il magazzino.
+## Aggiornamento Over The Air (Pull-OTA)
+L'aggiornamento OTA funziona così: l'ESP32 è il cliente e il server Flask funge da magazzino.
 
 - Controllo: L'ESP32 contatta il server e legge un piccolo file di testo (JSON) che indica l'ultima versione disponibile.
 - Confronto: Se la versione sul server (es. 271) è maggiore di quella che l'ESP32 sta facendo girare (es. 270), parte il download.
 - Aggiornamento: L'ESP32 scarica il file binario dal server, lo scrive nella memoria interna e si riavvia da solo con il nuovo codice.
 
 Vantaggio: Non devi collegare cavi USB. Ti basta caricare il file sul server e l'hardware si aggiorna via Wi-Fi quando è pronto.
-
-
 
 ### Guida alla Configurazione Rapida
 Per compilare il firmware puoi eseguire i seguenti comandi:
@@ -52,7 +50,7 @@ Per compilare il firmware puoi eseguire i seguenti comandi:
 
    ```
 
-3. Prima compilazione (per il primo upload via USB):
+3. Compilazione per il primo upload via USB:
    ```
    pio run -t upload   
    ```
@@ -66,3 +64,4 @@ Per compilare il firmware puoi eseguire i seguenti comandi:
    Lancia il comando:
    ```bash
    make
+   ```
