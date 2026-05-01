@@ -17,7 +17,7 @@ Per garantire la conformità agli standard di audit e la non ripudiabilità:
 ### Specifiche Tecniche
 - MCU          : ESP32 (Firmware C++ / Toolchain Platformio)
 - OS Centrale  : Ubuntu 22.04 LTS su Raspberry PI
-- Storage      : FRAM (Real-time) + SQLite (Storage)
+- Storage      : FRAM (Real-time) su ESP32 + SQLite su Raspberry PI
 - Protocolli   : mTLS, HTTP Ingest
 
 
