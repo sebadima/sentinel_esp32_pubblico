@@ -11,7 +11,7 @@ Il sistema adotta una strategia di storage ibrida per massimizzare la resilienza
 
 ### Validazione e Sicurezza del Dato
 Per garantire la conformità agli standard di audit e la non ripudiabilità:
-* Firma SHA-256: Ogni record viene firmato localmente incrociando i dati dei sensori con l'Unique Device ID della MCU.
+* Firma SHA-256: Ogni record viene firmato localmente incrociando i dati rilevati dai sensori con l'Unique Device ID del micro controllore  ESP32.
 * Isolamento di Rete: Il perimetro di rete è chiuso, non ci sono porte o servizi MQTT aperti verso server in cloud.
 
 ### Specifiche Tecniche
