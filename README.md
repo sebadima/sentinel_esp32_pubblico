@@ -1,6 +1,6 @@
 # SENTINEL Node V3.5: Documentazione Tecnica e Specifiche
 
-Sentinel Node è un'unità di monitoraggio IoT industriale basata su architettura ESP32 e Ubuntu LTS, ottimizzata per la gestione autonoma di ambienti HACCP. Il sistema è progettato per operare in edge computing, garantendo l'integrità dei dati senza dipendenze da infrastrutture Cloud esterne.
+Sentinel Node è un'unità di monitoraggio IoT basata su architettura ESP32 e Ubuntu LTS, ottimizzata per la gestione autonoma di ambienti multi-sensori. Il sistema è progettato per operare in edge computing, garantendo l'integrità dei dati senza dipendenze da infrastrutture Cloud esterne.
 
 ---
 
@@ -12,7 +12,7 @@ Il sistema adotta una strategia di storage ibrida per massimizzare la resilienza
 ### Validazione e Sicurezza del Dato
 Per garantire la conformità agli standard di audit e la non ripudiabilità:
 * Firma SHA-256: Ogni record viene firmato localmente incrociando i dati dei sensori con l'Unique Device ID della MCU.
-* Isolamento di Rete: Comunicazione basata su MQTT locale e supporto mTLS. Il perimetro di rete è chiuso, riducendo la superficie di attacco e garantendo il funzionamento offline.
+* Isolamento di Rete: Il perimetro di rete è chiuso, riducendo la superficie di attacco e garantendo il funzionamento offline.
 
 ### Specifiche Tecniche
 - MCU          : ESP32 (Firmware C++ / Toolchain RAW)
