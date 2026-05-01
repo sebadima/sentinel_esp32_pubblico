@@ -23,7 +23,7 @@ Per garantire la conformità agli standard di audit e la non ripudiabilità:
 ---
 
 ### Guida alla Configurazione Rapida
-Per compilare il firmware e configurare il nodo, eseguire i seguenti comandi atomici:
+Per compilare il firmware puoi eseguire i seguenti comandi:
 
 1. Inizializzazione ambiente:
    cp env_example .env
