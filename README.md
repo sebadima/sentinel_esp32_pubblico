@@ -6,7 +6,7 @@ Sentinel Node è un'unità di monitoraggio IoT basata su architettura ESP32 e Ub
 
 ### Architettura e Storage
 Il sistema adotta una strategia di storage ibrida per massimizzare la resilienza:
-* FRAM (Ferroelectric RAM): Utilizzata per il log dei dati in tempo reale. Offre cicli di scrittura quasi infiniti, eliminando il degrado tipico delle memorie Flash/SD e garantendo la persistenza dei dati anche in caso di blackout improvviso.
+* FRAM (Ferroelectric RAM): Utilizzata per il log dei dati in tempo reale. Offre cicli di scrittura fino a 3 ore, consentendo di bypassare i disturbi delle rete Wi-Fi o LAN da pochi millisecondi fino ad un giorno intero.
 * Local SQLite: Database primario su host per l'archiviazione e l'analisi storica dei record.
 
 ### Validazione e Sicurezza del Dato
