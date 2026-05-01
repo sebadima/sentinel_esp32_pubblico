@@ -26,8 +26,9 @@ Per garantire la conformità agli standard di audit e la non ripudiabilità:
 Per compilare il firmware puoi eseguire i seguenti comandi:
 
 1. Inizializzazione ambiente:
+   ```
    cp env_example .env
-
+   ```
 2. Configurazione parametri di rete (Modificare l'indirizzo IP per puntare al Raspberry Pi / Server locale):
    ```
    WIFI_SSID=cambia_questo
