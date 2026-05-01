@@ -22,6 +22,17 @@ Per garantire la conformità agli standard di audit e la non ripudiabilità:
 
 ---
 
+## Aggiornamento Over The Air (Pull-OTA
+Il Pull-OTA funziona così: l'ESP32 è il cliente e il server Flask è il magazzino.
+
+- Controllo: L'ESP32 contatta il server e legge un piccolo file di testo (JSON) che indica l'ultima versione disponibile.
+- Confronto: Se la versione sul server (es. 271) è maggiore di quella che l'ESP32 sta facendo girare (es. 270), parte il download.
+- Aggiornamento: L'ESP32 scarica il file binario dal server, lo scrive nella memoria interna e si riavvia da solo con il nuovo codice.
+
+Vantaggio: Non devi collegare cavi USB. Ti basta caricare il file sul server e l'hardware si aggiorna via Wi-Fi quando è pronto.
+
+---
+
 ### Guida alla Configurazione Rapida
 Per compilare il firmware puoi eseguire i seguenti comandi:
 
